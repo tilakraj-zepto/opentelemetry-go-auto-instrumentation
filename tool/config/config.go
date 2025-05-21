@@ -62,6 +62,8 @@ type BuildConfig struct {
 // is passed. This value is specified by the build system.
 var ToolVersion = "1.0.0"
 
+var BuildPath = ""
+
 var conf *BuildConfig
 
 func GetConf() *BuildConfig {
