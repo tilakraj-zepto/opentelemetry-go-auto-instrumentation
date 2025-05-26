@@ -19,4 +19,5 @@ type RpcAttrsGetter[REQUEST any] interface {
 	GetService(request REQUEST) string
 	GetMethod(request REQUEST) string
 	GetServerAddress(request REQUEST) string
+	GetGRPCStatusCode(request REQUEST) int64
 }
