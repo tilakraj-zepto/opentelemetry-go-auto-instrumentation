@@ -44,11 +44,11 @@ type RpcClientMetric struct {
 var mu sync.Mutex
 
 var rpcMetricsConv = map[attribute.Key]bool{
-	semconv.RPCSystemKey:     true,
-	semconv.RPCMethodKey:     true,
-	semconv.RPCServiceKey:    true,
-	semconv.ServerAddressKey: true,
-        semconv.RPCGRPCStatusCodeKey: true,
+	semconv.RPCSystemKey:         true,
+	semconv.RPCMethodKey:         true,
+	semconv.RPCServiceKey:        true,
+	semconv.ServerAddressKey:     true,
+	semconv.RPCGRPCStatusCodeKey: true,
 }
 
 var globalMeter metric.Meter
