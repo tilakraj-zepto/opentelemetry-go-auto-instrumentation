@@ -48,6 +48,7 @@ var rpcMetricsConv = map[attribute.Key]bool{
 	semconv.RPCMethodKey:     true,
 	semconv.RPCServiceKey:    true,
 	semconv.ServerAddressKey: true,
+        semconv.RPCGRPCStatusCodeKey: true,
 }
 
 var globalMeter metric.Meter
