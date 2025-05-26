@@ -40,6 +40,9 @@ func (r *RpcAttrsExtractor[REQUEST, RESPONSE, GETTER]) OnStart(attributes []attr
 	}, attribute.KeyValue{
 		Key:   semconv.ServerAddressKey,
 		Value: attribute.StringValue(r.Getter.GetServerAddress(request)),
+	}, attribute.KeyValue{
+		Key:   semconv.RPCGRPCStatusCodeKey,
+		Value: attribute.Int64Value(r.Getter.GetGRPCStatusCode(request)),
 	})
 	return attributes, parentContext
 }
