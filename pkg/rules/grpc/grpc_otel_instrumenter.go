@@ -67,6 +67,9 @@ func (g grpcAttrsGetter) GetServerAddress(request grpcRequest) string {
 	return request.serverAddress
 }
 
+func (g grpcAttrsGetter) GetGRPCStatusCode(response grpcResponse) int64 {
+	return int64(response.statusCode)
+
 type grpcStatusCodeExtractor[REQUEST grpcRequest, RESPONSE grpcResponse] struct {
 }
 
